@@ -10,6 +10,9 @@ import { Estado } from './entities/estado.entity';
 import { Municipio } from './entities/municipio.entity';
 import { TipoAsentamiento } from './entities/tipo_asentamiento.entity';
 import { Zona } from './entities/zona.entity';
+import { EstadosController } from './estados/estados.controller';
+import { EstadosService } from './estados/estados.service';
+import { EstadosModule } from './estados/estados.module';
 
 @Module({
   imports: [
@@ -26,7 +29,8 @@ import { Zona } from './entities/zona.entity';
       synchronize: false,
       entities: [Asentamiento, Ciudad, CodigoPostal, Estado, Municipio, TipoAsentamiento, Zona]
     }),
-    AsentamientosModule],
+    AsentamientosModule,
+    EstadosModule],
   controllers: [AppController],
   providers: [AppService],
 })
