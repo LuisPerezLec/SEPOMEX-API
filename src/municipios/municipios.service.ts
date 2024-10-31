@@ -16,7 +16,7 @@ export class MunicipiosService {
       async findMunicipiosByEstado(id_estado: number): Promise<Municipio[]> {
         return await this.municipioRepository.find({
             where: { estado: { id_estado } },
-            relations: ['estado'], // Cargar relación si es necesario
+            select: ['id_municipio', 'codigo_municipio', 'descripcion_municipio'],
         });
     }
 }
