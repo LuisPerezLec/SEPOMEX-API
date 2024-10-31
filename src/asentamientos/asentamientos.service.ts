@@ -39,8 +39,8 @@ export class AsentamientosService {
   
     // Agrupar los asentamientos
     const resultado = {
-      municipio: municipio.descripcion_municipio,
-      estado: estado.descripcion_estado,
+      id_municipio: municipio.id_municipio,
+      id_estado: estado.id_estado,
       asentamientos: asentamientos.map(asentamiento => ({
         id_asentamiento: asentamiento.id_asentamiento,
         descripcion_tipo_asenta: asentamiento.tipoAsenta.descripcion_tipo_asenta,
